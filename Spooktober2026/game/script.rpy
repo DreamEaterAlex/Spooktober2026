@@ -3,7 +3,8 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+define e = Character("Фамильяр")
+define me = Character("Ведьманейм")
 
 
 # The game starts here.
@@ -14,19 +15,24 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg room
+    scene bg myroom
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
+    "Утро встретило меня привычной тяжестью поверх одеяла."
 
-    show eileen happy
+    show familiar common with dissolve
 
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
+    e "Ведьманейм, просыпайся!"
+    e "Ты сама говорила, что у тебя важный день. А уже полдень."
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    show familiar sad
+
+    e "Я не хочу, чтобы ты потом ещё 10 лет мне ныла, что ничего не добилась в жизни."
+    me "Ладно, ладно. Я бы уже давно встала, если бы ты не давил на меня своим весом."
 
     # This ends the game.
 
