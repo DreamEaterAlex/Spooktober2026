@@ -1619,3 +1619,106 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+
+
+#############################################
+###CUSTOM SCREENS
+###############################################
+
+##########################
+###Screen player stats
+
+screen player_stats():
+
+    frame:
+        xalign 0.02
+        yalign 0.02
+
+        vbox:
+            spacing 5
+
+            text "Решимость: [player_resolve] / [max_player_resolve]"
+            text "Силы: [player_charge] / [max_player_charge]"
+
+
+#########################
+###Screen book button
+
+screen book_button():
+    frame:
+        xalign 0.75
+        yalign 0.02
+
+        vbox:
+            spacing 1
+            
+            imagebutton:
+                idle "objects/book button.png"
+                hover "objects/book button.png"
+                action Show("book")
+            text "B" at center
+
+#########################
+###Screen map button
+
+screen map_button():
+    frame:
+        xalign 0.95
+        yalign 0.02
+
+        vbox:
+            spacing 1
+
+            imagebutton:
+                idle "images/objects/map button.png"
+                hover "images/objects/map button.png"
+                action Show("map")
+            text "M" at center
+
+#########################
+###Screen book
+
+screen book():
+
+    frame:
+        xalign 0.32
+        yalign 0.32
+        
+        button:
+            xfill True
+            yfill True
+            action Hide("book")
+
+        add "images/objects/book screen.png":
+            xalign 0.5
+            yalign 0.1
+            zoom 0.5
+  
+        vbox:
+            spacing 5
+
+            text "В этой книге хранятся ритуалы и всякое прочее"
+
+#########################
+###Screen map
+
+screen map():
+    
+    frame:
+        xalign 0.62
+        yalign 0.32
+        
+        button:
+            xfill True
+            yfill True
+            action Hide("map")
+
+        add "images/objects/map screen.png":
+            xalign 0.5
+            yalign 0.1
+            zoom 0.5
+
+        vbox:
+            spacing 5
+            text "На этой карте нарисованы все интересные места парка"
