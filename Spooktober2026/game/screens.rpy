@@ -1647,7 +1647,7 @@ screen player_stats():
 
 screen book_button():
     frame:
-        xalign 0.75
+        xalign 0.90
         yalign 0.02
 
         vbox:
